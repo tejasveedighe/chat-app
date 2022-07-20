@@ -20,6 +20,6 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "arrow-body-style": [0],
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": [0]
   }
 }
