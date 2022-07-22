@@ -27,7 +27,7 @@ function SignIn() {
       }
       toaster.push(
         <Message type="success" closable>
-          Signed In success
+          Sign In success
         </Message>
       );
     } catch (err) {
