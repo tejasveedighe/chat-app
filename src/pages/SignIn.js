@@ -1,10 +1,20 @@
 import React from 'react';
 import firebase from 'firebase/app';
 import { Icon } from '@rsuite/icons';
-import { Col, Container, Grid, Panel, Row, Button } from 'rsuite';
+import {
+  Col,
+  Container,
+  Grid,
+  Panel,
+  Row,
+  Button,
+  Message,
+  useToaster,
+} from 'rsuite';
 import { auth, database } from '../misc/firebase';
 
 function SignIn() {
+  const toaster = useToaster();
   const sigInWithProvider = async provider => {
     try {
       const { additionalUserInfo, user } = await auth.signInWithPopup(provider);
@@ -15,8 +25,17 @@ function SignIn() {
           createdAt: firebase.database.ServerValue.TIMESTAMP,
         });
       }
+      toaster.push(
+        <Message type="success" closable>
+          Signed In success
+        </Message>
+      );
     } catch (err) {
-      console.log('error: ', err.message);
+      toaster.push(
+        <Message type="error" closable>
+          Failed To Sign In
+        </Message>
+      );
     }
   };
   // const onFacebookSignIn = () => {
