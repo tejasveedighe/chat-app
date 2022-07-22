@@ -1,12 +1,21 @@
 {
-  "extends": ["eslint:recommended", "airbnb", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:testing-library/react",
+    "plugin:jest/all"
+  ],
   "plugins": ["react-hooks"],
   "env": {
-    "browser": true
+    "browser": true,
+    "es2021": true
   },
   "parser": "@babel/eslint-parser",
   "parserOptions": {
-    "requireConfigFile": false
+    "sourceType": "module"
   },
   "rules": {
     "no-plusplus": [0],
