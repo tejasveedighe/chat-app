@@ -26,7 +26,7 @@ function SignIn() {
         });
       }
       toaster.push(
-        <Message type="success" closable>
+        <Message showIcon type="success" closable>
           Sign In success
         </Message>
       );
