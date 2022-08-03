@@ -1,13 +1,6 @@
 import { Icon } from '@rsuite/icons';
 import React, { useCallback } from 'react';
-import {
-  Button,
-  Drawer,
-  Message,
-  Notification,
-  toaster,
-  useToaster,
-} from 'rsuite';
+import { Button, Drawer, Message, toaster } from 'rsuite';
 import Dashboard from '.';
 import { useMediaQuery, useModalState } from '../../misc/custom-hooks';
 import { auth } from '../../misc/firebase';
