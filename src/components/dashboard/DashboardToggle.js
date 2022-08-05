@@ -22,7 +22,7 @@ function DashboardToggle() {
 
   return (
     <>
-      <Button block color="blue" onClick={open}>
+      <Button appearance="primary" block color="blue" onClick={open}>
         <Icon icon="dashboard" /> Dashboard
       </Button>
       <Drawer full={isMobile} open={isOpen} onClose={close} placement="left">
