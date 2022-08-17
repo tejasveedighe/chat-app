@@ -3,6 +3,7 @@ import Modal from 'rsuite/Modal';
 import Button from 'rsuite/Button';
 import { toaster, Message } from 'rsuite';
 import { useModalState } from '../../misc/custom-hooks';
+import AvatarEditor from 'react-avatar-editor';
 
 const fileInputTypes = '.png, .jpeg, .jpg';
 
@@ -58,7 +59,20 @@ export function AvatarInputBtn() {
           <Modal.Header>
             <Modal.Title>Adjust and Upload new avatar</Modal.Title>
           </Modal.Header>
-          <Modal.Body>xxx</Modal.Body>
+          <Modal.Body>
+            <div className="d-flex justify-content-center align-items-center h-100">
+              {image && (
+                <AvatarEditor
+                  image={image}
+                  width={200}
+                  height={200}
+                  border={10}
+                  borderRadius={100}
+                  rotate={0}
+                />
+              )}
+            </div>
+          </Modal.Body>
           <Modal.Footer>
             <Button block appearance="ghost">
               Upload New Avatar
