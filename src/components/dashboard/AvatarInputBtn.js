@@ -6,6 +6,7 @@ import { useModalState } from '../../misc/custom-hooks';
 import AvatarEditor from 'react-avatar-editor';
 import { useProfile } from '../../context/profile.context';
 import { database, storage } from '../../misc/firebase';
+import ProfileAvatar from '../ProfileAvatar';
 
 const fileInputTypes = '.png, .jpeg, .jpg';
 
@@ -96,6 +97,7 @@ export function AvatarInputBtn() {
   };
   return (
     <div className="mt-3 text-center">
+      <ProfileAvatar src={profile.avatar} name={profile.name} />
       <div>
         <label
           htmlFor="avatar-upload"
