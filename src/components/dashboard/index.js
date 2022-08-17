@@ -22,7 +22,14 @@ function Dashboard({ onSignOut }) {
         </Message>,
         4000
       );
-    } catch (error) {}
+    } catch (error) {
+      toaster.push(
+        <Message showIcon type="error">
+          {`An error occured: ${error.message}`}
+        </Message>,
+        4000
+      );
+    }
   };
 
   return (
